@@ -13,16 +13,16 @@ import com.tco.misc.BadRequestException;
 
 public class Database {
 
-    private static String USER = "cs314-db";
-    private static String PASSWORD = "eiK5liet1uej";
+    private static String USER = "b574990a72e725";
+    private static String PASSWORD = "181319bb";
     private String URL;//sub/separate class?
 
     public Database() {
         String useTunnel = System.getenv("CS314_USE_DATABASE_TUNNEL");
         if(useTunnel != null && useTunnel.equals("true")) {
-            URL = "jdbc:mariadb://127.0.0.1:56247/cs314";
+            URL = "us-cdbr-east-05.cleardb.net/heroku_001ba428b240e57";
         } else {
-            URL = "jdbc:mariadb://faure.cs.colostate.edu/cs314";
+            URL = "us-cdbr-east-05.cleardb.net/heroku_001ba428b240e57";
         }
     }
 
